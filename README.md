@@ -4,9 +4,9 @@
 
 ---
 
-## 🔹 Key Features
+##  Key Features
 
-### 👤 User Panel
+### User Panel
 
 * User registration and login
 * Browse products by category
@@ -15,7 +15,7 @@
 * View order history and status
 * Submit and read product reviews (stored in MongoDB)
 
-### 🔐 Admin Panel
+###  Admin Panel
 
 * Secure admin login
 * Add, edit, or remove products
@@ -24,7 +24,7 @@
 
 ---
 
-## 🔧 Technologies Used
+##  Technologies Used
 
 * **Frontend**: HTML, CSS, JavaScript
 * **Backend**: PHP
@@ -37,7 +37,7 @@
 
 ---
 
-## 🗂️ Database Setup
+##  Database Setup
 
 Oracle SQL scripts for table creation and sample data are located in:
 
@@ -49,7 +49,7 @@ Use **Oracle SQL Developer** or **SQL\*Plus** to execute the scripts.
 
 ---
 
-## 🧩 MongoDB Integration
+##  MongoDB Integration
 
 MongoDB stores product reviews dynamically. Ensure:
 
@@ -58,7 +58,7 @@ MongoDB stores product reviews dynamically. Ensure:
 
 ---
 
-## ⚙️ Installation Guide
+##  Installation Guide
 
 ### 1. Install Required Software
 
@@ -82,7 +82,7 @@ Restart Apache after saving changes.
 
 ---
 
-## 🚀 Running the Application
+##  Running the Application
 
 1. Clone or download the project to your web server directory (e.g., `htdocs` in XAMPP)
 2. Import Oracle scripts using SQL Developer
