@@ -1,0 +1,463 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c0bbbb; /* Light gray background */
+    color: #333;
+    min-height: 100vh;  /* Ensure the body takes full height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Category Intro */
+.category-intro {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 20px;  /* Remove any extra space from top */
+    position: fixed;  /* Fix the position at the top */
+    top: 0;  /* Make it stick to the top */
+    left: 0;  /* Align it to the left */
+    width: 100%;  /* Full width */
+    background-color: #c0bbbb; /* Light gray background */
+}
+
+.category-intro h1 {
+    font-size: 36px;
+    color: #ff5733;
+}
+
+.category-intro p {
+    font-size: 18px;
+    color: #666;
+    margin-top: -20px;
+}
+
+/* Ensure the content below the fixed intro section has space */
+body {
+    padding-top: 200px; /* Adjust this value according to your category intro height */
+}
+
+/* Product List */
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 190px;
+    transition: transform 0.3s ease;
+}
+
+.product-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.category-intro h1 {
+    color: #ff5733;
+}
+
+.product-item:hover {
+    border: 2px solid #ff5733;
+}
+
+
+
+
+header {
+    background-color: #222222;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Logo Styling */
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Navigation */
+nav .left-nav {
+    display: flex;
+    margin-right: auto;
+}
+
+nav .left-nav li {
+    margin-left: 25px;
+}
+
+nav .left-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .left-nav li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* Right Navigation */
+nav .right-nav {
+    display: flex;
+}
+
+nav .right-nav li {
+    margin-left: 25px;
+}
+
+nav .right-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .right-nav li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+
+@media (max-width: 768px) {
+    .category-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .category-item {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 12px;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    nav .logo {
+        font-size: 24px;
+    }
+}
+
+nav .left-nav .shop-menu {
+    position: relative;
+}
+
+
+/* Dropdown Menu */
+nav .left-nav .shop-menu .dropdown {
+    margin-top: 5px;
+    display: none;  /* Hide dropdown by default */
+    position: absolute;
+    top: 100%; /* Position the dropdown directly below the shop link */
+    left: 0;
+    background-color: #222222;
+    width: 200px; /* Adjust width of dropdown */
+    border-radius: 6px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 0;
+    opacity: 0; /* Initially hide with 0 opacity */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth opacity transition */
+}
+
+/* Dropdown Items */
+nav .left-nav .shop-menu .dropdown li {
+    padding: 12px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+nav .left-nav .shop-menu .dropdown li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+}
+
+nav .left-nav .shop-menu .dropdown li a:hover {
+    color: #ffcc00;
+}
+
+nav .left-nav .shop-menu:hover .dropdown {
+    display: block;
+    opacity: 1; 
+    visibility: visible; 
+    transition: opacity 0.3s ease, visibility 0s 0s; 
+}
+
+nav .left-nav .shop-menu:focus-within .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+nav .left-nav .shop-menu:active .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+.logo a{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+
+/* Cart Icon at the Bottom-Right */
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    background-color: #ff5733;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Cart count in the icon */
+.cart-icon #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #fff;
+    color: #ff5733;
+    font-size: 19px;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+/* Cart Dropdown */
+.cart {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    display: none;
+    z-index: 1000;
+    margin-bottom: 40px;
+}
+
+/* Cart Items List */
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+/* Buttons (Proceed to Checkout, Clear Cart) */
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Clear Cart Button */
+#clear-cart {
+    background-color: #dc3545; /* Red color for 'Clear Cart' */
+}
+
+#clear-cart:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Checkout Button */
+#checkout {
+    background-color: #007bff; /* Blue color for 'Proceed to Checkout' */
+}
+
+#checkout:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+/* Product List */
+.product-item {
+    margin: 20px 0;
+}
+
+
+/* Add to Cart Button */
+.add-to-cart {
+    margin-top: 10px;
+    margin-left: 2px;
+    background-color: #ff5733; /* Orange background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 13px; /* Text size */
+    cursor: pointer; /* Cursor pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    width: 60%; /* Full width of the container */
+    text-align: center; /* Center text */
+}
+
+/* Add to Cart Button Hover Effect */
+.add-to-cart:hover {
+    background-color: #e04e23; /* Darker shade on hover */
+}
+
+
+.quantity {
+    width: 50px; /* Set the width of the input box */
+    padding: 8px; /* Add some padding for spacing */
+    font-size: 16px; /* Set font size */
+    border: 2px solid #ff5733; /* Set the border color to orange at all times */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center-align the text inside */
+    outline: none; /* Remove the outline on focus */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Focused state for the quantity input */
+.quantity:focus {
+    border-color: #ff5733; /* Change border color to the same orange when focused */
+}
+
+
+
+#cart-items-container {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+
+#cart-items {
+    max-height: 300px; /* Set your desired max height */
+    overflow-y: auto;  /* Enable vertical scrollbar when needed */
+    padding-right: 10px; /* Optional: prevent content from hiding under scrollbar */
+}

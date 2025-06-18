@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <link rel="stylesheet" href="customer.css">
+    <script defer src="customer.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="admin.html">UrbanFood</a></div>
+            <ul class="left-nav">
+                <li class="shop-menu"><a href="products.html">Products</a></li>
+                <li class="shop-menu"><a href="customer.html">Customers</a></li>
+                <li class="shop-menu"><a href="supplier.html">Suppliers</a></li>
+                <li class="shop-menu"><a href="orders.html">Orders</a></li>
+                <li class="shop-menu"><a href="payments.html">Payments</a></li>
+                <li class="shop-menu"><a href="delivery.html">Delivery</a></li>
+            </ul>
+            <ul class="right-nav">
+                <li><a href="#" id="logoutLink">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="customer-list">
+            <h2 id="customer-title">Registered Customers</h2>
+            <div id="customers-container"></div>
+        </section>
+    </main>
+
+    <!-- Edit Customer Modal -->
+<!-- Hidden Edit Modal -->
+<div id="editCustomerModal" class="modal">
+    <div class="modal-content">
+        <h2>Edit Customer</h2>
+        <form id="editCustomerForm">
+            <input type="hidden" id="editCustomerId" name="id">
+
+            <div class="form-row">
+                <label for="editFullName">Full Name:</label>
+                <input type="text" id="editFullName" name="full_name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="editUsername">Username:</label>
+                <input type="text" id="editUsername" name="username" required>
+            </div>
+
+            <div class="form-row">
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="editContact">Contact:</label>
+                <input type="text" id="editContact" name="contact" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="save-btn">Save Changes</button>
+                <button type="button" id="cancelEditBtn" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    <footer>
+        <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

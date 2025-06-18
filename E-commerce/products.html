@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Products</title>
+  <link rel="stylesheet" href="products.css" />
+  <script defer src="products.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo"><a href="admin.html">UrbanFood</a></div>
+      <ul class="left-nav">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="customer.html">Customers</a></li>
+        <li><a href="supplier.html">Suppliers</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="payments.html">Payments</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+      </ul>
+      <ul class="right-nav">
+        <li><a href="#" id="logoutLink">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Add Product Section -->
+    <section class="add-product">
+      <form id="addProductForm" enctype="multipart/form-data">
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" name="product-name" required />
+
+        <label for="product-category">Category:</label>
+        <select id="product-category" name="product-category" required>
+          <option value="Fruits">Fruits</option>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Dairy">Dairy Products</option>
+        </select>
+
+        <label for="product-price">Price per item (Rs):</label>
+        <input type="number" id="product-price" name="product-price" required />
+
+        <label for="product-stock">Stock Quantity:</label>
+        <input type="number" id="product-stock" name="product-stock" required />
+
+        <label for="supplier-id">Supplier:</label>
+        <select id="supplier-id" name="supplier-id" required>
+          <!-- Dynamically populated -->
+        </select>
+
+        <label for="product-image">Upload Image:</label>
+        <input type="file" id="product-image" name="product-image" accept="image/*" required />
+
+        <img id="image-preview" src="#" alt="Image Preview"
+          style="display: none; max-width: 150px; margin-top: 10px;" />
+
+        <div class="button-container">
+          <button type="submit">Add Product</button>
+          <button type="button" id="clearFieldsBtn">Clear Fields</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Product List Section -->
+    <section class="product-list" id="productList">
+      <h2>Available Products</h2>
+      <label for="product-filter">Select Product Type:</label>
+      <select id="product-filter" name="product-filter">
+        <option value="Fruits">Fruits</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Dairy">Dairy Products</option>
+      </select>
+
+      <div id="product-container" class="product-grid"></div>
+    </section>
+
+    <!-- Update Product Modal -->
+    <div id="update-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span id="close-update-modal" class="close">&times;</span>
+        <h2>Update Product</h2>
+        <form id="updateProductForm" enctype="multipart/form-data">
+          <input type="hidden" id="update-product-id" name="update-product-id" />
+
+          <label for="update-product-name">Product Name:</label>
+          <input type="text" name="update-product-name" id="update-product-name" />
+
+          <label for="update-product-category">Category:</label>
+          <input type="text" name="update-product-category" id="update-product-category" />
+
+          <label for="update-product-price">Price:</label>
+          <input type="number" name="update-product-price" id="update-product-price" />
+
+          <label for="update-product-stock">Stock:</label>
+          <input type="number" name="update-product-stock" id="update-product-stock" />
+
+          <label for="supplier-id-update">Supplier Id:</label>
+          <select id="supplier-id-update" name="supplier-id-update" required>
+            <!-- Dynamically populated -->
+          </select>
+
+          <label for="update-product-image">Product Image:</label>
+          <input type="file" name="update-product-image" id="update-product-image" accept="image/*" />
+
+          <div id="image-preview-box" style="margin-top: 10px;">
+            <img id="update-image-preview" src="#" alt="Product Image" style="max-width: 150px; display: none;" />
+          </div>
+
+          <button type="submit">Update Product</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

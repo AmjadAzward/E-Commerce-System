@@ -1,0 +1,250 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c0bbbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: #222;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .right-nav {
+    display: flex;
+}
+
+nav .right-nav li {
+    margin-left: 25px;
+}
+
+nav .right-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Logo Link */
+.logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+/* Input Field Styling */
+input {
+    width: 275px !important;
+}
+
+/* Payment Form */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 70px;
+}
+
+.auth-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: -15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin-top: -50px;
+    height: 450px;
+}
+
+/* Readonly Input Styling */
+.auth-box input[readonly] {
+    background-color: #f4f4f4;
+    cursor: not-allowed;
+}
+
+/* Button Styling */
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-box button:hover {
+    background-color: #e0a700;
+}
+
+/* Paragraph Styling */
+.auth-box p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.auth-box a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.auth-box a:hover {
+    text-decoration: underline;
+}
+
+/* Flexbox for Form Groups */
+.auth-box .form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Label Styling */
+.auth-box .form-group label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Input Field Styling */
+.auth-box input[type="text"],
+.auth-box input[type="password"],
+.auth-box input[type="month"] {
+    width: calc(100% - 115px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Centering Input Fields */
+.input-field {
+    width: 275px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+/* "Cancel Payment" Button Styling */
+button[type="submit"]:last-of-type {
+    background-color: #45a049;
+}
+
+button[type="submit"]:last-of-type:hover {
+    background-color: #45a049;
+}
+
+/* Anchor Styling */
+a {
+    text-decoration: none;
+}
+
+/* Cancel Button in Anchor */
+a .cancel-button {
+    background-color: #f44336;
+    color: white;
+}
+
+a .cancel-button:hover {
+    background-color: #e53935;
+}

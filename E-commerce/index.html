@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanFood</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">UrbanFood</div>
+            <ul class="left-nav">
+                <li class="shop-menu">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown">
+                        <li><a href="fruits.html">Fruits</a></li>
+                        <li><a href="vegetables.html">Vegetables</a></li>
+                        <li><a href="dairy.html">Dairy Products</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <ul class="right-nav">
+                <li><a href="login.html">Login</a></li> 
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Welcome to UrbanFood</h1>
+            <p>Your local marketplace for fresh, healthy, and handmade products.</p>
+        </section>
+
+        <section class="categories">
+            <h2>Shop By Category</h2>
+            <div class="category-list">
+                <a href="fruits.html" class="category-item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5b35b18af93fd4d75e591f4a/1543985705633-PCFJHY4L8CTTOR4NSRW9/HS-Website---Fruit-Products.jpg?format=2500w" alt="Fruits">
+                    <h3>Fruits</h3>
+                </a>
+                <a href="vegetables.html" class="category-item">
+                    <img src="https://www.ugaoo.com/cdn/shop/articles/dea77a9fa0_2734fb49-ce70-4dcf-a123-e3f7a43a59e3.jpg?v=1738239797" alt="Vegetables">
+                    <h3>Vegetables</h3>
+                </a>
+                <a href="dairy.html" class="category-item">
+                    <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322911/dairy-and-meat.jpg" alt="Dairy Products">
+                    <h3>Dairy Products</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+    </footer>
+
+
+    
+    <button id="feedbackBtn" title="What people say about us">
+        👤
+    </button>
+    
+    <!-- Feedback Section -->
+    <section id="feedbackSection" class="hidden">
+        <h2>What Our Customers Say</h2>
+        <div id="feedbackList" class="feedback-container"></div>
+      </section>
+</body>
+</html>

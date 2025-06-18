@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - UrbanFood</title>
+    <link rel="stylesheet" href="checkout.css">
+    <script defer src="checkout.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">UrbanFood</a></div>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Payment Details</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="card-name">Name</label>
+                    <input type="text" id="card-name" name="card-name" class="input-field" placeholder="Enter your name as on the card" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" class="input-field" placeholder="Enter your card number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="month" id="expiry-date" name="expiry-date" class="input-field" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" class="input-field" placeholder="Enter CVV" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Total Amount</label>
+                    <input type="text" id="amount" name="amount" class="input-field" readonly>
+                </div>
+
+                <button type="submit" id="placeOrderBtn">Proceed to Payment</button>
+            </form>
+
+            <a href="index.html">
+                <button type="button" class="cancel-button">Cancel Payment</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetables - UrbanFood</title>
+    <link rel="stylesheet" href="fruits.css">
+    <script defer src="category.js"></script>
+    <script defer src="vegetables.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">UrbanFood</a> 
+            </div>
+            <ul class="left-nav">
+                <li class="shop-menu">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown">
+                        <li><a href="fruits.html">Fruits</a></li>
+                        <li><a href="vegetables.html">Vegetables</a></li>
+                        <li><a href="dairy.html">Dairy Products</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="right-nav">
+                <li><a href="myOrders.html">My Orders</a></li> 
+                <li><a href="profile.html">My profile</a></li>
+                <li><a href="index.html">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="category-intro">
+            <h1>Fresh Vegetables</h1>
+            <p>Explore our collection of fresh, organic, and delicious vegetables.</p>
+        </section>
+
+        <section class="product-list" id="product-list">
+            <!-- Products will be loaded dynamically here -->
+        </section>
+    </main>
+
+    <div class="cart-icon" id="cart-icon">
+        🛒 <span id="cart-count">0</span>
+    </div>
+  <!-- Cart Section -->
+  <section class="cart" id="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: Rs <span id="total-price">0.00</span></p>
+    <button id="checkout-btn" >Proceed to Checkout</button>
+    <button id="clear-cart">Clear Cart</button>
+</section>
+    
+    <footer>
+        <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+    </footer>
+</body>
+</html>

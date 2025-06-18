@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanFood</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.js"></script>
+
+
+        <script src="admin.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">UrbanFood</div>
+            <ul class="left-nav">
+                <li class="shop-menu">
+                    <a href="products.html">Products</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="customer.html">Customers</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="supplier.html">Suppliers</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="orders.html">Orders</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="payments.html">Payments</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="delivery.html">Delivery</a>
+                </li>
+            </ul>
+            <ul class="right-nav">
+                <li><a href="#" id="logoutLink">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Welcome to UrbanFood</h1>
+            <p>Your local marketplace for fresh, healthy, and handmade products.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+    </footer>
+
+     
+    <button id="feedbackBtn" title="What people say about us">
+        👤
+    </button>
+    
+    <!-- Feedback Section -->
+    <section id="feedbackSection" class="hidden">
+        <h2>What Our Customers Say</h2>
+        <div id="feedbackList" class="feedback-container"></div>
+      </section>
+</body>
+
+</html>

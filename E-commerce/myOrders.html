@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - UrbanFood</title>
+    <link rel="stylesheet" href="profile.css">
+    <script defer src="myOrders.js"></script>
+    <link rel="stylesheet" href="myOrders.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" ><a href="index.html">UrbanFood </a></div>
+            <ul class="left-nav">
+                <li class="shop-menu">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown">
+                        <li><a href="fruits.html">Fruits</a></li>
+                        <li><a href="vegetables.html">Vegetables</a></li>
+                        <li><a href="dairy.html">Dairy Products</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="right-nav">
+                <li><a href="myOrders.html" >My Orders</a></li> 
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="#" id="logoutLink">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="order-list">
+        <h2>Order List</h2>
+        <div id="orders-container"></div>
+    </section>
+    <footer>
+        <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+    </footer>
+
+   
+</body>
+</html>

@@ -1,0 +1,362 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: url('https://img.freepik.com/premium-photo/promotional-copy-space-banner-red-background-fruit-promotion-blank-space-copy-space-text_627345-1782.jpg?w=1380') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundSlide 12s infinite alternate;
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Logo Styling */
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Navigation */
+nav .left-nav {
+    display: flex;
+    margin-right: auto;
+}
+
+nav .left-nav li {
+    margin-left: 25px;
+}
+
+nav .left-nav li a, nav .right-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .left-nav li a:hover, nav .right-nav li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* Right Navigation */
+nav .right-nav {
+    display: flex;
+}
+
+nav .right-nav li {
+    margin-left: 25px;
+}
+
+/* Main Content */
+main {
+    padding: 40px;
+    text-align: center;
+    margin-top: 80px; /* Add margin to offset fixed header */
+}
+
+/* Order Form */
+.add-order {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+.add-order form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-order label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.add-order input, .add-order select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Order List */
+.order-list {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.order-list h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+#orders-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    min-height: 20vh;
+    padding-bottom: 30px;
+}
+
+/* Order Item Styling */
+.order-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 180px; /* Adjust width */
+    padding: 10px; /* Adjust padding */
+}
+
+.order-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.order-item h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.order-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.order-item .order-status {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.order-item button {
+    background: #ffcc00;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.order-item button:hover {
+    background: #e6b800;
+}
+
+.order-actions {
+    margin-top: 10px;
+}
+
+.order-actions button {
+    background: #ffcc00;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.order-actions button:hover {
+    background: #e6b800;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    .add-order {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 12px;
+    }
+
+    #orders-container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo a {
+        font-size: 24px;
+    }
+
+    .order-item {
+        width: 100%;
+    }
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-container button {
+    border-radius: 5px;
+    font-size: 18px; /* Increase font size for bigger text */
+    font-weight: bold;
+    cursor: pointer;
+    border: none; /* Remove default border */
+    width: 100%; /* Make buttons the same size */
+    max-width: 600px; /* Limit the width for consistency */
+    height: 40px;
+}
+
+/* Add Order Button Styling */
+.button-container button[type="submit"] {
+    background-color: #ffcc00;
+}
+
+.button-container button[type="submit"]:hover {
+    background-color: #e6b800;
+}
+
+/* Save Button Styling */
+#saveOrder {
+    background-color: #28a745;
+}
+
+#saveOrder:hover {
+    background-color: #218838;
+}
+
+
+.logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+
+
+.order-card h3 {
+    margin-top: 0;
+}
+.order-card button {
+    padding: 6px 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.order-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    color: black; /* Ensures all text inside the card is black */
+}
+
+.order-card h3,
+.order-card p,
+.order-card ul,
+.order-card li,
+.order-card button {
+    color: black;
+    font-style: none;
+}
+
+
+button:disabled {
+    background-color: #d3d3d3;  /* Light gray */
+    border: 1px solid #ccc;     /* Lighter border */
+    color: #888;                /* Lighter text color */
+    cursor: not-allowed;        /* Show not-allowed cursor */
+}

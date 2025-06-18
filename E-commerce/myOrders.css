@@ -1,0 +1,128 @@
+
+
+.order-card h3 {
+    margin-top: 0;
+}
+.order-card button {
+    padding: 6px 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.order-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    color: black; /* Ensures all text inside the card is black */
+}
+
+.order-card h3,
+.order-card p,
+.order-card ul,
+.order-card li,
+.order-card button {
+    color: black;
+    font-style: none;
+}
+
+
+#orders-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+h2{
+    color: white;
+    justify-content: center;
+    margin-left: 700px;
+}
+
+/* General container for the order cards */
+#orders-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styling for individual order cards */
+.order-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to elevate the card */
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title of the order card */
+.order-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styling for the details like customer ID, total, status, etc. */
+.order-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Status styling */
+.order-card p strong {
+    color: #000;
+    font-weight: 600;
+}
+
+/* List for ordered products */
+.order-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+.order-card ul li {
+    font-size: 0.95rem;
+    color: #777;
+}
+
+/* Confirm received button */
+.order-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Hover effect for the button */
+.order-card button:hover {
+    background-color: #45a049;
+}
+
+/* Button disabled state */
+.order-card button:disabled {
+    background-color: #ccc;
+}

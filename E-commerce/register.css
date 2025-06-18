@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/premium-photo/promotional-copy-space-banner-red-background-fruit-promotion-blank-space-copy-space-text_627345-1782.jpg?w=1380') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: #222;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .right-nav {
+    display: flex;
+}
+
+nav .right-nav li {
+    margin-left: 25px;
+}
+
+nav .right-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 70px; 
+}
+
+.auth-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 460px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.auth-box h2 {
+    margin-bottom: 20px;
+    margin-top: -20px;
+    color: #333;
+}
+
+.auth-box input[type="text"], .auth-box input[type="email"], .auth-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-box button:hover {
+    background-color: #e0a700;
+}
+
+.auth-box p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.auth-box a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.auth-box a:hover {
+    text-decoration: underline;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+input{
+    width: 275px !important;
+}

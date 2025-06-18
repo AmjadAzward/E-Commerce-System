@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: url('https://img.freepik.com/premium-photo/promotional-copy-space-banner-red-background-fruit-promotion-blank-space-copy-space-text_627345-1782.jpg?w=1380') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundSlide 12s infinite alternate;
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    background-color: #222222;
+    padding: 15px 0;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Logo Styling */
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Navigation */
+nav .left-nav {
+    display: flex;
+    margin-right: auto;
+}
+
+nav .left-nav li {
+    margin-left: 25px;
+}
+
+nav .left-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .left-nav li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* Right Navigation */
+nav .right-nav {
+    display: flex;
+}
+
+nav .right-nav li {
+    margin-left: 25px;
+}
+
+nav .right-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .right-nav li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Payments Section */
+.payments-list {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.payments-list h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+#payments-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    .payments-intro, .add-payment {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 24px;
+    }
+}
+
+
+
+     .card {
+            width: 200px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+            display: inline-block;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #e0e0e0;
+            color: #222222;
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .card p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+

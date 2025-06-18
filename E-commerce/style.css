@@ -1,0 +1,428 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/premium-photo/promotional-copy-space-banner-red-background-fruit-promotion-blank-space-copy-space-text_627345-1782.jpg?w=1380') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundSlide 12s infinite alternate ease-in-out;
+    background-repeat: repeat-y !important; /* Repeats vertically */
+    background-color: red;
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    animation: fadeEffect 12s infinite alternate;
+}
+
+/* Fade effect */
+@keyframes fadeEffect {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Header */
+header {
+    background-color: #222222;
+    padding: 15px 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Navigation */
+nav .left-nav {
+    display: flex;
+    margin-right: auto;
+}
+
+nav .left-nav li, nav .right-nav li {
+    margin-left: 25px;
+}
+
+nav .left-nav li a, nav .right-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .left-nav li a:hover, nav .right-nav li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* Dropdown Menu */
+nav .left-nav .shop-menu {
+    position: relative;
+}
+
+nav .left-nav .shop-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222222;
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+nav .left-nav .shop-menu .dropdown li {
+    padding: 12px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+nav .left-nav .shop-menu .dropdown li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+}
+
+nav .left-nav .shop-menu .dropdown li a:hover {
+    color: #ffcc00;
+}
+
+nav .left-nav .shop-menu:hover .dropdown,
+nav .left-nav .shop-menu:focus-within .dropdown,
+nav .left-nav .shop-menu:active .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+/* Main Section */
+main {
+    padding: 40px;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin: -30px 0 50px;
+}
+
+.intro h1 {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.intro p {
+    font-size: 22px;
+    color: #ffffff;
+    max-width: 650px;
+    margin: -30px auto 0;
+}
+
+/* Categories Section */
+.categories {
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Category List */
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Category Item */
+.category-item {
+    background-color: #222222;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.category-item {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .category-item {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 12px;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    nav .logo {
+        font-size: 24px;
+    }
+}
+
+/* Background Animation */
+@keyframes backgroundSlide {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.deleteBtn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.deleteBtn:hover {
+    background-color: #c82333;
+}
+
+
+
+/* Floating button */
+#feedbackBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 999;
+    transition: background-color 0.3s;
+}
+
+#feedbackBtn img {
+    width: 30px;
+    height: 30px;
+}
+
+#feedbackBtn:hover {
+    background-color: #218838;
+}
+
+/* Feedback section styling */
+#feedbackSection {
+    padding: 40px;
+    background: #f4f4f4;
+    display: none;
+    text-align: center;
+    border-top: 5px solid #ff5733; /* Optional: Add a top border to the section */
+}
+
+#feedbackSection h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Container for feedback boxes */
+.feedback-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Styling for individual feedback cards */
+.feedback-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 300px;
+    min-width: 250px; /* Prevent too small cards */
+    text-align: left;
+    font-size: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #555;
+}
+
+/* Add hover effect to feedback cards */
+.feedback-box:hover {
+    transform: translateY(-5px); /* Lift the card */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Darker shadow */
+}
+
+/* Style for the order number and feedback content */
+.feedback-box strong {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.feedback-box em {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Style for the feedback content */
+.feedback-box p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-top: 10px;
+    color: #444;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Optional: Add a small spacing around feedback cards */
+.feedback-container > .feedback-box {
+    margin-bottom: 20px;
+}
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+    .feedback-container {
+        flex-direction: column; /* Stack feedback cards vertically on smaller screens */
+        gap: 15px;
+    }
+
+    .feedback-box {
+        max-width: 90%;
+    }
+}

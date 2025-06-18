@@ -1,0 +1,511 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    min-height: 110vh; /* Increase the height to ensure more space for scrolling */
+    overflow-y: auto;
+    background: url('https://img.freepik.com/premium-photo/promotional-copy-space-banner-red-background-fruit-promotion-blank-space-copy-space-text_627345-1782.jpg?w=1380') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundSlide 12s infinite alternate;
+    position: relative;
+}
+/* Header Styles */
+header {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Logo Styling */
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Navigation */
+nav .left-nav {
+    display: flex;
+    margin-right: auto;
+}
+
+nav .left-nav li {
+    margin-left: 25px;
+}
+
+nav .left-nav li a, nav .right-nav li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .left-nav li a:hover, nav .right-nav li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+nav .right-nav {
+    display: flex;
+}
+
+nav .right-nav li {
+    margin-left: 25px;
+}
+
+main {
+    padding: 40px;
+    text-align: center;
+    margin-top: 80px; 
+}
+
+
+.delivery-intro, .add-delivery {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-intro {
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+.delivery-intro h1 {
+    font-size: 26px;
+    color: #333;
+}
+
+.delivery-intro p {
+    font-size: 18px;
+    color: #555;
+}
+
+.add-delivery {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.add-delivery form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-delivery label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.add-delivery input, .add-delivery select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-delivery button {
+    background: #ffcc00;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-delivery button:hover {
+    background: #e6b800;
+}
+
+/* Delivery List */
+.delivery-list {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.delivery-list h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+#deliveries-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.delivery-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delivery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.delivery-item h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.delivery-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    .add-order {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 12px;
+    }
+
+    #orders-container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo a {
+        font-size: 24px;
+    }
+
+    .order-item {
+        width: 100%;
+    }
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-container button {
+    border-radius: 5px;
+    font-size: 18px; /* Increase font size for bigger text */
+    font-weight: bold;
+    cursor: pointer;
+    border: none; /* Remove default border */
+    width: 100%; /* Make buttons the same size */
+    max-width: 600px; /* Limit the width for consistency */
+    height: 40px;
+}
+
+/* Add Order Button Styling */
+.button-container button[type="submit"] {
+    background-color: #ffcc00;
+}
+
+.button-container button[type="submit"]:hover {
+    background-color: #e6b800;
+}
+
+/* Save Button Styling */
+#saveOrder {
+    background-color: #28a745;
+}
+
+#saveOrder:hover {
+    background-color: #218838;
+}
+
+
+
+.delivery-actions {
+    margin-top: 10px;
+}
+
+.delivery-actions button {
+    background: #ffcc00;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.delivery-actions button:hover {
+    background: #e6b800;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+/* Container for delivery cards */
+#deliveries-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style for each individual delivery card */
+.delivery-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the delivery card */
+.delivery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the title (Order ID) */
+.delivery-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Styling for the delivery and shipping dates */
+.delivery-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.delivery-card p strong {
+    color: #333;
+}
+/* Button container for Update and Delete buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Update button styling */
+.update-button {
+    background-color: #4CAF50;  /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Delete button styling */
+.delete-button {
+    background-color: #f44336;  /* Red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effects */
+.update-button:hover {
+    background-color: #45a049;  /* Darker green */
+}
+
+.delete-button:hover {
+    background-color: #e53935;  /* Darker red */
+}
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* dimmed background */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fff;
+    margin: 8% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Fade in effect */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Form inputs */
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-content label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .modal-content input[type="text"],
+  .modal-content input[type="date"] {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  /* Button group */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+  .button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .button-group button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .button-group button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  .button-group button#cancelUpdate {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .button-group button#cancelUpdate:hover {
+    background-color: #c82333;
+  }
+/* Shared Button Style */
+
+
+
+
+
+        /* Styling for the Cancel button */
+        .cancel-button {
+            /* 20px from the bottom edge */
+            font-weight: bold;
+            margin-left: 470px;
+            font-size: 40px;
+        }
+        
+       
+        

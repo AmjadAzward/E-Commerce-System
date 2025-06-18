@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Deliveries</title>
+    <link rel="stylesheet" href="delivery.css">
+    <script defer src="delivery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="admin.html">UrbanFood</a>
+            </div>
+            <ul class="left-nav">
+                <li class="shop-menu">
+                    <a href="products.html">Products</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="customer.html">Customers</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="supplier.html">Suppliers</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="orders.html">Orders</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="payments.html">Payments</a>
+                </li>
+                <li class="shop-menu">
+                    <a href="delivery.html">Delivery</a>
+                </li>
+            </ul>
+            <ul class="right-nav">
+                <li>
+                    <li><a href="#" id="logoutLink">Logout</a></li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="add-delivery">
+            <form id="addDeliveryForm">
+                <label for="order-id">Order ID:</label>
+                <select id="order-id" required>
+                    <!-- Options will be dynamically inserted here -->
+                </select>
+                <label for="delivery-date">Delivery Date:</label>
+                <input type="date" id="delivery-date" required>
+
+                <!-- Change this section -->
+                <label for="shipping-date">Shipping Date:</label>
+                <input type="date" id="shipping-date" required>
+
+                <div class="button-container">
+                    <button type="submit">Add Order</button>
+                    <button type="button" id="saveOrder">Save</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="delivery-list">
+            <h2>Delivery List</h2>
+            <div id="deliveries-container"></div>
+        </section>
+    </main><!-- The Update Delivery Form (Initially Hidden) -->
+
+    
+
+
+
+    <!-- Delivery Update Modal -->
+<div id="update-modal" class="modal">
+    <div class="modal-content">
+      <span class="cancel-button" id="cancelUpdate">&times;</span>
+      <form id="updateDeliveryForm">
+        <h2>Update Delivery</h2>
+        <input type="hidden" id="update-delivery-id">
+  
+        <label>Order ID:</label>
+        <input type="text" id="update-order-id" required><br>
+  
+        <label>Delivery Date:</label>
+        <input type="date" id="update-delivery-date" required><br>
+  
+        <label>Shipping Date:</label>
+        <input type="date" id="update-shipping-date" required><br>
+  
+        <button type="submit" class="update-button">Update</button>
+
+      </form>
+    </div>
+  </div>
+  
+
+
+    <footer>
+        <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

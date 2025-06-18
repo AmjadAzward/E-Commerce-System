@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - UrbanFood</title>
+    <link rel="stylesheet" href="profile.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.min.js"></script>
+    <script src="profile.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" ><a href="index.html">UrbanFood </a></div>
+            <ul class="left-nav">
+                <li class="shop-menu">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown">
+                        <li><a href="fruits.html">Fruits</a></li>
+                        <li><a href="vegetables.html">Vegetables</a></li>
+                        <li><a href="dairy.html">Dairy Products</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="right-nav">
+                <li><a href="myOrders.html">My Orders</a></li> 
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="#" id="logoutLink">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>My Profile</h1>
+            <p>View and update your personal information.</p>
+        </section>
+
+        <section class="profile-section">
+            <form class="profile-form">
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id" readonly>
+
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="contact">Contact</label>
+                <input type="tel" id="contact" name="contact">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 UrbanFood. All rights reserved.</p>
+    </footer>
+
+   
+</body>
+</html>
