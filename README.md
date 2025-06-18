@@ -98,7 +98,4 @@ Restart Apache after saving changes.
 
 This project is developed for academic or client purposes. Redistribution or commercial use is not permitted without prior authorization.
 
----
-
-Let me know if you'd like a version formatted for PDF, GitHub README, or printed documentation.
 
