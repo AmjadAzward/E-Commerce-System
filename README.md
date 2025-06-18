@@ -94,7 +94,7 @@ Restart Apache after saving changes.
 
 ---
 
-## 📜 License
+##  License
 
 This project is developed for academic or client purposes. Redistribution or commercial use is not permitted without prior authorization.
 
