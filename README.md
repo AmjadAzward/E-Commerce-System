@@ -1,95 +1,104 @@
-
 # Urban Food – E-Commerce System
 
-**Urban Food** is a comprehensive e-commerce web application designed to facilitate online food ordering. It is built using standard web technologies such as HTML, CSS, JavaScript, and PHP, with Oracle Database handling core transactions and MongoDB managing product reviews.
+**Urban Food** is a full-featured e-commerce web application for online food ordering. It utilizes standard web technologies (HTML, CSS, JavaScript, PHP), with **Oracle Database** managing the main business logic and **MongoDB** handling user-generated reviews.
 
 ---
 
-## Features
+## 🔹 Key Features
 
-### User Panel
+### 👤 User Panel
 
-- User registration and login
-- Browse products by category
-- Product search and filtering options
-- Add products to cart and complete checkout
-- View past orders and order status
-- Write and view product reviews (stored in MongoDB)
+* User registration and login
+* Browse products by category
+* Product search and filtering
+* Add to cart and checkout
+* View order history and status
+* Submit and read product reviews (stored in MongoDB)
 
-### Admin Panel
+### 🔐 Admin Panel
 
-- Admin login authentication
-- Add, edit, or delete products
-- View and manage customer orders
-- Manage product categories and registered users
-
----
-
-## Technologies Used
-
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: PHP  
-- **Databases**:
-  - **Oracle 12c** – Manages users, products, and orders
-  - **MongoDB** – Stores customer product reviews
-- **Web Server**: Apache (via XAMPP)
-- **Development Tool**: Visual Studio Code
+* Secure admin login
+* Add, edit, or remove products
+* View and manage customer orders
+* Manage product categories and users
 
 ---
 
-## Database Schema
+## 🔧 Technologies Used
 
-All Oracle SQL scripts required for creating tables and inserting sample data are included in the project under:
+* **Frontend**: HTML, CSS, JavaScript
+* **Backend**: PHP
+* **Databases**:
+
+  * **Oracle 12c** – Core transactional data (users, products, orders)
+  * **MongoDB** – Product reviews
+* **Server Environment**: Apache (via XAMPP)
+* **Editor**: Visual Studio Code
+
+---
+
+## 🗂️ Database Setup
+
+Oracle SQL scripts for table creation and sample data are located in:
 
 ```
-
 /database/
+```
 
-````
-
-These can be executed using Oracle SQL Developer or SQL*Plus.
-
-
-## MongoDB Integration
-
-MongoDB is used to store and retrieve product reviews dynamically. Ensure your MongoDB server is running (locally or remotely) and the required PHP extension is installed and enabled.
+Use **Oracle SQL Developer** or **SQL\*Plus** to execute the scripts.
 
 ---
 
-## Installation and Setup
+## 🧩 MongoDB Integration
 
-### Step 1: Install Required Software
+MongoDB stores product reviews dynamically. Ensure:
 
-- XAMPP (includes Apache and PHP)
-- Oracle Database 12c or Oracle XE
-- Oracle SQL Developer
-- MongoDB Community Server
-- Visual Studio Code
-- PHP MongoDB Extension
+* MongoDB server is running (locally or remotely)
+* PHP MongoDB extension is installed and enabled
 
-### Step 2: Enable PHP Extensions
+---
 
-Edit your `php.ini` file and ensure the following extensions are enabled:
+## ⚙️ Installation Guide
+
+### 1. Install Required Software
+
+* XAMPP (Apache + PHP)
+* Oracle Database 12c or Oracle XE
+* Oracle SQL Developer
+* MongoDB Community Server
+* Visual Studio Code
+* PHP MongoDB Extension
+
+### 2. Enable PHP Extensions
+
+Edit `php.ini` and ensure the following lines are active:
 
 ```ini
-extension=oci8_12c     ; Oracle database support
+extension=oci8_12c     ; Oracle support
 extension=mongodb      ; MongoDB support
-````
+```
 
-Restart Apache after making changes.
+Restart Apache after saving changes.
 
 ---
 
-## Usage
+## 🚀 Running the Application
 
-1. Clone or download the project into your local web server directory (e.g., `htdocs` for XAMPP).
-2. Import Oracle SQL scripts using SQL Developer.
-3. Configure Oracle and MongoDB connection settings in the PHP config files.
-4. Start Apache, Oracle DB, and MongoDB services.
-5. Open a web browser and visit:
+1. Clone or download the project to your web server directory (e.g., `htdocs` in XAMPP)
+2. Import Oracle scripts using SQL Developer
+3. Configure Oracle & MongoDB credentials in PHP config files
+4. Start Apache, Oracle DB, and MongoDB services
+5. Open browser and go to:
 
-http://localhost/urban-food/
+**[http://localhost/urban-food/](http://localhost/urban-food/)**
 
-## License
+---
 
-This system is developed as an academic or client project. It is not licensed for public redistribution or commercial use without permission.
+## 📜 License
+
+This project is developed for academic or client purposes. Redistribution or commercial use is not permitted without prior authorization.
+
+---
+
+Let me know if you'd like a version formatted for PDF, GitHub README, or printed documentation.
+
